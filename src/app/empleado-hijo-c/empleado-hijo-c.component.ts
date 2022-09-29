@@ -9,6 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class EmpleadoHijoCComponent implements OnInit {
   @Input() empleado:Empleado;
   @Input() i:number;
+  arrayCaracteristicas = [""];
+
   constructor() {
 
   }
@@ -17,7 +19,7 @@ export class EmpleadoHijoCComponent implements OnInit {
 
   }
 
-  arrayCaracteristicas = [""];
+
 
   agregarCaracteristica(nuevaCaracteristica: string) {
     this.arrayCaracteristicas.push(nuevaCaracteristica);

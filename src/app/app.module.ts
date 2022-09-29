@@ -1,3 +1,4 @@
+import { ServicioEmpleadosService } from './servicio-empleados.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,7 +17,7 @@ import { CaracteristicasEmpleadoCComponent } from './caracteristicas-empleado-c/
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServicioEmpleadosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
