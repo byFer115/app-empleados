@@ -10,6 +10,12 @@
 
       </div>
 
+      <app-caracteristicas-empleado-c (caraceristicasEmpleado)="agregarCaracteristica($event)"></app-caracteristicas-empleado-c>
+
+      <ul style="list-style:none;">
+        <li *ngFor="let caracteristica of arrayCaracteristicas">{{caracteristica}}</li>
+      </ul>
+
     </div>
 
   </div>
