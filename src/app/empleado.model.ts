@@ -7,9 +7,9 @@ export class Empleado{
     this.salario=salario;
   }
 
-  nombre:String="";
-  apellido:String="";
-  cargo:String="";
+  nombre:string="";
+  apellido:string="";
+  cargo:string="";
   salario:number=0;
 
 }

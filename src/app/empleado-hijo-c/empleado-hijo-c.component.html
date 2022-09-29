@@ -6,7 +6,9 @@
 
       <div >
 
-        {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
+        <a [routerLink]="['/actualiza0', i]">
+          {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
+        </a>
 
       </div>
 

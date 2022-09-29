@@ -22,4 +22,21 @@ export class EmpleadosService{
     this.empleados.push(empleado);
   }
 
+  actualizarEmpleadoServicio(indice:number,empleado:Empleado){
+
+    let empeladoModificado=this.empleados[indice];
+    empeladoModificado.nombre=empleado.nombre;
+    empeladoModificado.apellido=empleado.apellido;
+    empeladoModificado.cargo=empleado.cargo;
+    empeladoModificado.salario=empleado.salario;
+
+  }
+
+  encontrarEmpleado(indice:number){
+    let empleado:Empleado=this.empleados[indice];
+
+    return empleado;
+
+  }
+
 }
