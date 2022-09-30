@@ -5,9 +5,13 @@
     <div class="col">
 
       <div >
+        {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
+        <a [routerLink]="['/actualiza',i]" [queryParams]="{accion:'1'}">
+          Actualiza
+        </a>
 
-        <a [routerLink]="['/actualiza0', i]">
-          {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
+        <a [routerLink]="['/actualiza',i]" [queryParams]="{accion:'2'}">
+          Elimnar
         </a>
 
       </div>
