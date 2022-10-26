@@ -13,6 +13,8 @@ import { QuienesComponentComponent } from './quienes-component/quienes-component
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
+import { DataServices } from './data.services';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes=[
   {path:'', component:HomeComponentComponent},
@@ -36,9 +38,11 @@ const appRoutes: Routes=[
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
+
   ],
-  providers: [ServicioEmpleadosService, EmpleadosService],
+  providers: [ServicioEmpleadosService, EmpleadosService, DataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

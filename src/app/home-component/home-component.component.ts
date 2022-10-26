@@ -22,7 +22,16 @@ export class HomeComponentComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.empleados=this.empleadoDataService.empleados;
+
+    this.empleadoDataService.obtenerEmpleados().subscribe({
+      next:(res)=>{
+        console.log(res);
+        this.empleados=res;
+        this.empleadoDataService.setEmpleados(this.empleados);
+      },
+      error: (error) => console.log(error)
+    });
+    //this.empleados=this.empleadoDataService.empleados;
   }
 
   agregarEmpleado(){
